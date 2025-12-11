@@ -1,7 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Figtree font via Google */
 @import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700;900&display=swap');
-
-@import "tailwindcss";
 
 :root{
   --heritage: #EC2088;
