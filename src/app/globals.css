@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* In Tailwind v4, we define our custom theme variables right here!
+  No complex config file needed.
+*/
+@theme {
+  /* Colors */
+  --color-heritage: #EC2088;
+  --color-purple: #8A2890;
+  --color-midnight: #292563;
+  --color-blackish: #191919;
+  --color-gallery: #FFFFFF;
+  --color-sky: #12B1E7;
+  --color-sun: #FDD40E;
+
+  /* Fonts - linked to the variable in layout.tsx */
+  --font-figtree: var(--font-figtree);
+
+  /* Gradients */
+  --background-image-cotton-candy: linear-gradient(90deg, #12B1E7 0%, #EC2088 100%);
+}
+
+/* Now standard CSS rules. 
+  We use @apply to mix utility classes.
+*/
+body {
+  @apply bg-white text-blackish;
+  font-family: var(--font-figtree), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Hult-Themed Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-purple); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-heritage);
+}

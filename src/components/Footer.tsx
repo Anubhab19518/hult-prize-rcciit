@@ -1,60 +1,88 @@
-// src/components/Footer.tsx
-import { Instagram, Linkedin } from "lucide-react";
+"use client";
+import React from "react";
+import Image from "next/image";
+import { Instagram, Linkedin, Mail, MapPin, Phone } from "lucide-react";
 
 export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#191919] text-[#FFFFFF] py-12">
+    <footer className="bg-blackish text-white pt-16 pb-8 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
-          {/* LEFT SECTION */}
+          {/* BRANDING SECTION */}
           <div>
-            <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="Hult Prize" className="h-10" />
-               <span className="h-8 w-px bg-white"></span>
-              <h4 className="font-semibold text-gallery text-sm">
-                RCC Institute of Information Technology
-              </h4>
+            <div className="flex items-center gap-4 mb-6">
+              {/* Ensure this is the WHITE version of the logo for dark backgrounds */}
+              <div className="relative w-12 h-12">
+                <Image 
+                  src="/logo.png" 
+                  alt="Hult Prize Logo" 
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              {/* Vertical Divider */}
+              <div className="w-px h-10 bg-gray-600"></div>
+              {/* University Name */}
+              <p className="font-figtree font-bold leading-tight text-lg">
+                RCC Institute of <br /> Information Technology
+              </p>
             </div>
-
-            <p className="mt-4 text-gallery/70 max-w-md leading-relaxed">
-              Empowering the next generation of social entrepreneurs at RCCIIT to
-              build meaningful, scalable solutions for global challenges.
+            
+            <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
+              The Hult Prize at RCCIIT empowers student entrepreneurs to solve the world's 
+              toughest challenges through innovative social enterprises.
             </p>
           </div>
 
           {/* QUICK LINKS */}
           <div>
-            <h4 className="font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-gallery/80">
-              <li><a href="#home" className="hover:text-heritage">Home</a></li>
-              <li><a href="#about" className="hover:text-heritage">About Us</a></li>
-              <li><a href="#squad" className="hover:text-heritage">Meet Our Squad</a></li>
-              <li><a href="#partner" className="hover:text-heritage">Partner With Us</a></li>
-              <li><a href="#resources" className="hover:text-heritage">Resources</a></li>
-              <li><a href="#contact" className="hover:text-heritage">Contact</a></li>
+            <h4 className="font-bold text-lg mb-6 text-heritage">Quick Links</h4>
+            <ul className="space-y-3 text-gray-300">
+              <li><a href="#home" className="hover:text-heritage transition-colors">Home</a></li>
+              <li><a href="#about" className="hover:text-heritage transition-colors">About Us</a></li>
+              <li><a href="#squad" className="hover:text-heritage transition-colors">Meet the Team</a></li>
+              <li><a href="#partner" className="hover:text-heritage transition-colors">Partner With Us</a></li>
+              <li><a href="#resources" className="hover:text-heritage transition-colors">Resources</a></li>
             </ul>
           </div>
 
-          {/* SOCIAL LINKS */}
+          {/* CONTACT & SOCIALS */}
           <div>
-            <h4 className="font-semibold mb-4">Connect With Us</h4>
-            <div className="flex items-center gap-4">
-              <a href="#" aria-label="Instagram">
-                <Instagram className="text-gallery hover:text-heritage" />
+            <h4 className="font-bold text-lg mb-6 text-heritage">Get in Touch</h4>
+            <ul className="space-y-4 text-gray-300 mb-8">
+              <li className="flex items-start gap-3">
+                <MapPin size={20} className="text-purple mt-1" />
+                <span className="text-sm">Canal S Rd, Beleghata, Kolkata – 700 015</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <Mail size={20} className="text-purple" />
+                <a href="mailto:hultprizercciit@gmail.com" className="text-sm hover:text-white">hultprizercciit@gmail.com</a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone size={20} className="text-purple" />
+                <span className="text-sm">+91 80138 32570</span>
+              </li>
+            </ul>
+
+            {/* Social Icons */}
+            <div className="flex gap-4">
+              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-heritage transition-all hover:-translate-y-1">
+                <Instagram size={20} />
               </a>
-              <a href="#" aria-label="LinkedIn">
-                <Linkedin className="text-gallery hover:text-heritage" />
+              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-heritage transition-all hover:-translate-y-1">
+                <Linkedin size={20} />
               </a>
             </div>
           </div>
         </div>
 
-        {/* BORDER LINE */}
-        <div className="border-t border-gallery/10 mt-12 pt-6 text-center text-gallery/50 text-sm">
-          © {year} Hult Prize at RCCIIT. All rights reserved.
+        {/* BOTTOM BAR */}
+        <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>© {year} Hult Prize at RCCIIT. All rights reserved.</p>
+          <p>Designed with ❤️ by the Tech Team</p>
         </div>
       </div>
     </footer>
