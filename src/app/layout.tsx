@@ -11,11 +11,8 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Hult Prize at RCCIIT",
+  title: "Hult Prize - RCC Institute of Information Technology",
   description: "Empowering the next generation of social entrepreneurs at RCCIIT.",
-  icons: {
-    icon: '/favicon.ico', 
-  },
 };
 
 export default function RootLayout({

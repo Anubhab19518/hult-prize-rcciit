@@ -37,12 +37,13 @@ export default function Contact() {
           {/* Contact Details */}
           <div className="space-y-6 mb-10">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-purple/10 flex items-center justify-center text-purple">
+              <div className="w-12 h-12  rounded-full bg-purple/10 flex items-center justify-center text-purple">
                 <Phone size={24} />
               </div>
               <div>
                 <p className="text-sm text-gray-500 font-semibold uppercase tracking-wider">Call Us</p>
                 <p className="text-xl font-bold text-midnight">+91 80138 32570</p>
+                <p className="text-xl font-bold text-midnight">+91 87777 23225</p>
               </div>
             </div>
 

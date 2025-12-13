@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image'; // The professional way to load images
 
 const navItems = [
@@ -21,14 +21,47 @@ export default function Navbar() {
     setOpen(false);
   };
 
+  // Intersection Observer for scroll tracking
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of section is visible
+      }
+    );
+
+    // Observe all sections
+    navItems.forEach((item) => {
+      const section = document.getElementById(item.id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
+
+    return () => {
+      navItems.forEach((item) => {
+        const section = document.getElementById(item.id);
+        if (section) {
+          observer.unobserve(section);
+        }
+      });
+    };
+  }, []);
+
   return (
     <header className="fixed w-full top-0 z-50 bg-blackish shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
         
         {/* Logo Section */}
         <div className="flex items-center gap-3">
           {/* Ensure 'logo.png' is inside your public folder! */}
-          <div className="relative h-10 w-10">
+          <div className="relative h-12 w-12 md:h-14 md:w-14">
             <Image 
               src="/logo.png" 
               alt="Hult Prize Logo" 

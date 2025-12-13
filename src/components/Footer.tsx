@@ -15,7 +15,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-4 mb-6">
               {/* Ensure this is the WHITE version of the logo for dark backgrounds */}
-              <div className="relative w-12 h-12">
+              <div className="relative w-14 h-14 md:w-16 md:h-16">
                 <Image 
                   src="/logo.png" 
                   alt="Hult Prize Logo" 
@@ -65,14 +65,18 @@ export default function Footer() {
                 <Phone size={20} className="text-purple" />
                 <span className="text-sm">+91 80138 32570</span>
               </li>
+              <li className="flex items-center gap-3">
+                <Phone size={20} className="text-purple" />
+                <span className="text-sm">+91 87777 23225</span>
+              </li>
             </ul>
 
             {/* Social Icons */}
             <div className="flex gap-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-heritage transition-all hover:-translate-y-1">
+              <a href="https://www.instagram.com/hp.rcciit/" className="bg-gray-800 p-2 rounded-full hover:bg-heritage transition-all hover:-translate-y-1">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-heritage transition-all hover:-translate-y-1">
+              <a href="https://www.linkedin.com/company/hult-prize-rcc-institute-of-information-technology" className="bg-gray-800 p-2 rounded-full hover:bg-heritage transition-all hover:-translate-y-1">
                 <Linkedin size={20} />
               </a>
             </div>

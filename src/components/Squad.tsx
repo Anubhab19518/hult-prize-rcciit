@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import { Linkedin } from 'lucide-react';
 import { TEAM } from '../utils/data';
 
 export default function Squad() {
@@ -17,7 +18,7 @@ export default function Squad() {
           <div className="w-20 h-1.5 bg-heritage mt-4 rounded-full mx-auto md:mx-0"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {safeTeam.map((m, idx) => (
             <div
               key={idx}
@@ -52,6 +53,19 @@ export default function Squad() {
                 <p className="text-heritage font-semibold text-sm uppercase mt-2 tracking-wide">
                   {m.role}
                 </p>
+              )}
+
+              {/* LinkedIn Icon */}
+              {m.linkedin && m.linkedin !== '#' && (
+                <a
+                  href={m.linkedin.startsWith('http') ? m.linkedin : `https://${m.linkedin}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-5 inline-flex items-center justify-center w-10 h-10 border-2 border-heritage rounded-full text-heritage hover:bg-heritage hover:text-white transition-all"
+                  title="LinkedIn Profile"
+                >
+                  <Linkedin size={20} />
+                </a>
               )}
             </div>
           ))}
