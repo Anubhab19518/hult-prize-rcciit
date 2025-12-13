@@ -77,7 +77,7 @@ export default function About() {
           <div className="rounded-3xl shadow-2xl overflow-hidden border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
             {/* Make sure banner.png exists in your public folder! */}
             <Image 
-              src="/banner.png" 
+              src="/Banner.png" 
               alt="Hult Prize Students Celebrating" 
               width={600}
               height={400}
