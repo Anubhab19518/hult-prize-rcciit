@@ -7,11 +7,11 @@ export const TEAM = [
     quote: 'Empowering the next generation to create meaningful change',
   },
   {
-    name: 'Deputy Campus Director',
-    role: undefined,
+    name: 'Tamagno Roy',
+    role: 'Deputy Campus Director',
     img: '/squad/member2.jpg',
     linkedin: '#',
-    quote: 'Coming soon',
+    quote: 'All the best things are wild and free',
   },
   {
     name: 'Faculty Mentor',
