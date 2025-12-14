@@ -53,7 +53,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-gray-500 font-semibold uppercase tracking-wider">Email Us</p>
-                <a href="mailto:hultprizercciit@gmail.com" className="text-xl font-bold text-midnight hover:text-heritage transition-colors">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hultprizercciit@gmail.com" className="text-xl font-bold text-midnight hover:text-heritage transition-colors">
                   hultprizercciit@gmail.com
                 </a>
               </div>
@@ -63,7 +63,7 @@ export default function Contact() {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:hultprizercciit@gmail.com"
+               href="https://mail.google.com/mail/?view=cm&fs=1&to=hultprizercciit@gmail.com"
               className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-heritage text-white font-bold shadow-lg hover:bg-purple transition-all hover:-translate-y-1"
             >
               Send an Email

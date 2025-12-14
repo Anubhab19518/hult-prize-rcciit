@@ -59,7 +59,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-purple" />
-                <a href="mailto:hultprizercciit@gmail.com" className="text-sm hover:text-white">hultprizercciit@gmail.com</a>
+                <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=hultprizercciit@gmail.com" className="text-sm hover:text-white">hultprizercciit@gmail.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-purple" />
